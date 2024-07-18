@@ -76,20 +76,10 @@ const b = Math.floor(Math.random() * 255);
 const c = Math.floor(Math.random() * 255);
 const x = Math.floor(Math.random() * (180 + 180) - 180);
 
-function randomColor(a, b, c) {
-  const color = `rgb(${a},${b},${c})`;
-  return color;
-}
-console.log(color);
-function randomAngle(x) {
-  const angle = `rotate(${x}deg)`;
-  return angle;
-}
-
 changeBtn.addEventListener("mouseenter", () => {
-  changeBtn.style.backgroundColor = randomColor(a, b, c);
+  changeBtn.style.backgroundColor = `rgb(${a},${b},${c})`;
 });
 
 changeBtn.addEventListener("mouseleave", () => {
-  changeBtn.style.transform = randomAngle(x);
+  changeBtn.style.transform = `rotate(${x}deg)`;
 });
