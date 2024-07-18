@@ -71,15 +71,15 @@ calcForm.addEventListener("submit", (event) => {
 // Задание 5
 //Вставить в разметку html тег button без js (просто предусмотреть в разметке). При наведении на кнопку изменять ее цвет каждый раз рандомным цветом. При выведении мышки за пределы кнопки поворачивать кнопку на рандомный угол от -180 до 180 градусов. Использовать обработку событий mouseenter, mouseleave на этой кнопке.
 const changeBtn = document.querySelector(".change-btn");
-const a = Math.floor(Math.random() * 255);
-const b = Math.floor(Math.random() * 255);
-const c = Math.floor(Math.random() * 255);
-const x = Math.floor(Math.random() * (180 + 180) - 180);
 
 changeBtn.addEventListener("mouseenter", () => {
+  const a = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  const c = Math.floor(Math.random() * 255);
   changeBtn.style.backgroundColor = `rgb(${a},${b},${c})`;
 });
 
 changeBtn.addEventListener("mouseleave", () => {
+  const x = Math.floor(Math.random() * (180 + 180) - 180);
   changeBtn.style.transform = `rotate(${x}deg)`;
 });
